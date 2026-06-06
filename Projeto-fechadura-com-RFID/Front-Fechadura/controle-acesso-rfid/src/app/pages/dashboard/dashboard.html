@@ -1,0 +1,31 @@
+<h1 class="titulo">Controle de Acesso RFID</h1>
+
+<div class="container">
+
+  <div
+    *ngFor="let acesso of acessos"
+    class="card-acesso"
+    [class.liberado]="acesso.liberado"
+    [class.negado]="!acesso.liberado">
+
+    <div class="status">
+      <span
+        class="bolinha"
+        [class.verde]="acesso.liberado"
+        [class.vermelha]="!acesso.liberado">
+      </span>
+
+      <span>{{ acesso.liberado ? 'Acesso Liberado' : 'Acesso Negado' }}</span>
+    </div>
+
+    <div class="info">
+      <strong>UID:</strong> {{ acesso.uid }}
+    </div>
+
+    <div class="info">
+      <strong>Data:</strong> {{ acesso.data_hora | date:'dd/MM/yyyy HH:mm:ss' }}
+    </div>
+
+  </div>
+
+</div>
