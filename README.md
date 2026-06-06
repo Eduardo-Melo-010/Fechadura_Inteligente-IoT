@@ -11,9 +11,29 @@ Sistema de controle de acesso utilizando ESP32-C3, leitor RFID RC522 e servo mot
 | Apresentação (slides) | [] |
 | Link do Wokwi | [https://wokwi.com/projects/46612028162286796](https://wokwi.com/projects/466120281622867969) |
 
+## 👥 Equipe
+
+| Nome |
+|---|
+| EDUARDO JOSÉ SILVA DE MELO | 
+| HEITOR LEONARDO NOVAES PINTINO | 
+| ISABELLA GEOVANA DO NASCIMENTO SILVA | 
+| JOÃO VICTOR LUIZ DE MORAES CHAGAS |
+| RENATHA ALVES DE LIMA |
+| SÁVIO TORRES DA SILVA LIRA |
+| VANESSA TREZENA DE AMORIM |
+
+
+**Curso:** Análise e Desenvolvimento de Sistemas — 4º Período
+**Faculdade:** Senac/PE | **Orientador:** Professor Arnott Caiado | 
+
 ## 📋 Sobre o Projeto
 
-O sistema permite o controle de acesso físico por meio de cartões/tags RFID. Ao aproximar uma tag do leitor, o ESP32 verifica se o UID está autorizado e aciona um servo motor para abrir ou negar o acesso. Cada tentativa de acesso é registrada no Supabase e exibida em tempo real no dashboard web.
+Este trabalho apresenta um sistema de controle de acesso físico a armários, baseado em IoT, utilizando um microcontrolador ESP32-C3 e um leitor RFID RC522. O sistema verifica se um cartão ou tag RFID está autorizado e aciona um servo motor para liberar ou negar o acesso ao armário. Todas as tentativas de acesso são registradas automaticamente em um banco de dados na nuvem Supabase (PostgreSQL) e monitoradas em tempo real por meio de um dashboard web desenvolvido em Angular e publicado no Netlify.
+
+## 🌐 Abstract
+
+This work presents an IoT-based physical access control system for classroom and laboratory lockers, developed using an ESP32-C3 microcontroller and an RC522 RFID reader. Upon detecting an RFID card or tag, the system verifies the UID against an authorized list and actuates a servo motor to grant or deny access. Each access attempt whether authorized or not is automatically transmitted via HTTPS to a Supabase (PostgreSQL) cloud database and monitored in real time through a web dashboard built with Angular 21 and deployed on Netlify. The proposed solution addresses the lack of automated traceability in academic environments, offering a low-cost, scalable, and secure alternative to conventional lock systems.
 
 ---
 
