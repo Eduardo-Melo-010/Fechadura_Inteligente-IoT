@@ -2,7 +2,7 @@
 
 Sistema de controle de acesso utilizando ESP32-C3, leitor RFID RC522 e servo motor, com dashboard web em tempo real integrado ao Supabase.
 
-<img width="1536" height="1024" alt="ChatGPT Image 5 de jun  de 2026, 11_01_25" src="" />
+<img width="1536" height="1024" alt="" src="" />
 
 ---
 
