@@ -2,9 +2,13 @@
 
 Sistema de controle de acesso utilizando ESP32-C3, leitor RFID RC522 e servo motor, com dashboard web em tempo real integrado ao Supabase.
 
-<img width="1536" height="1024" alt="" src="" />
+# 🔗 Links de Acesso
 
----
+| Recurso | Link |
+|---|---|
+| Repositório GitHub | [github.com/Eduardo-Melo-010/Fechadura_Inteligente-IoT](https://github.com/Eduardo-Melo-010/Fechadura_Inteligente-IoT) |
+| Dashboard (deploy) | [fechadura.netlify.app](https://fechadura.netlify.app) |
+| Apresentação (slides) | [inserir link] |
 
 ## 📋 Sobre o Projeto
 
