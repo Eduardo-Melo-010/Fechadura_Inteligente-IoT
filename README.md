@@ -269,11 +269,9 @@ A tabela `acessos` armazena cada tentativa de acesso:
 | RF05 | Liberação de Acesso | O sistema deve liberar o acesso mediante validação da tag | Liberar apenas para tags válidas e autorizadas; acionar automaticamente o servo após validação |
 | RF06 | Duração de Liberação | O sistema deve controlar o tempo de liberação | A porta permanece liberada por tempo configurável e é bloqueada automaticamente após o limite |
 | RF07 | Encerramento do Acesso | O sistema deve bloquear o acesso após o período de liberação | O sistema trava automaticamente após o tempo limite ou mediante comando |
-| RF08 | Cadastro de Tags RFID | O sistema deve permitir o cadastro de tags RFID vinculadas a usuários | Cadastrar tags com UID único, vinculá-las a usuários e permitir ativação ou desativação |
-| RF09 | Cadastro de Usuários | O sistema deve permitir o cadastro de usuários autorizados | Cadastrar, editar e excluir usuários com vínculo a uma ou mais tags RFID |
-| RF10 | Registro de Logs de Acesso | O sistema deve registrar logs de todas as tentativas de acesso | Todas as tentativas devem ser registradas com data, hora, identificação do usuário e local |
-| RF11 | Atualização automática | O sistema deve exibir registros em dashboard web | Atualização automática a intervalos regulares refletindo os eventos registrados |
-| RF12 | Configuração de Tempo de Acesso | O sistema deve permitir configurar o tempo de liberação das portas | Definir tempo por porta ou globalmente com aplicação imediata |
+| RF08 | Registro de Logs de Acesso | O sistema deve registrar logs de todas as tentativas de acesso | Todas as tentativas devem ser registradas com data, hora, identificação do usuário e local |
+| RF09 | Atualização automática | O sistema deve exibir registros em dashboard web | Atualização automática a intervalos regulares refletindo os eventos registrados |
+| RF10 | Configuração de Tempo de Acesso | O sistema deve permitir configurar o tempo de liberação das portas | Definir tempo por porta ou globalmente com aplicação imediata |
 
 
 ## 📋 Requisitos Não Funcionais (RNF)
