@@ -245,3 +245,37 @@ A tabela `acessos` armazena cada tentativa de acesso:
 - **Frontend:** Angular 21
 - **Banco de dados:** Supabase (PostgreSQL)
 - **Deploy:** Netlify
+---
+
+## 🔐 Segurança e Integridade Acadêmica
+
+As credenciais do projeto (Wi-Fi e Supabase) são armazenadas em um arquivo `config.h`
+separado, que **não é versionado no repositório**.
+
+### Como configurar
+
+1. Abra o `config.h` e preencha com suas credenciais reais:
+```cpp
+   #define WIFI_SSID     "SEU_WIFI"
+   #define WIFI_PASSWORD "SUA_SENHA"
+   #define SUPABASE_URL  "https://SEU_PROJETO.supabase.co/rest/v1/acessos"
+   #define SUPABASE_KEY  "SUA_CHAVE_API"
+```
+
+2. O arquivo `config.h` está listado no `.gitignore` — suas credenciais nunca serão enviadas ao GitHub.
+
+### Como as credenciais são carregadas no código
+
+O arquivo principal importa o `config.h` localmente:
+
+```cpp
+#include "config.h"
+
+// As variáveis são usadas diretamente pelo firmware:
+WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
+http.addHeader("apikey", SUPABASE_KEY);
+```
+
+Nenhuma credencial real aparece no código versionado.
+
+### .gitignore
