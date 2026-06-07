@@ -3,6 +3,7 @@
 #include <MFRC522.h>
 #include <ESP32Servo.h>
 #include <HTTPClient.h>
+#include "config.h"
 
 // Pinos
 #define SS_PIN       2
@@ -14,15 +15,6 @@
 //UIDS
 const String UID_TAG = "2B879602";
 const String UID_CARTAO = "0347CAFD";
-
-// WiFi
-const char* WIFI_SSID     = "SENAC-Mesh";
-const char* WIFI_PASSWORD = "09080706";
-
-//Banco de dados
-const char* SUPABASE_URL = "https://yisdnihrcsrlktropnnm.supabase.co/rest/v1/acessos";
-
-const char* SUPABASE_KEY = "sb_publishable_EdGat2bocgev02w_8IZn6A_Of6FOkkN";
 
 MFRC522 rfid(SS_PIN, RST_PIN);
 Servo servoFechadura;
