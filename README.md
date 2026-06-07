@@ -61,6 +61,30 @@ Projeto-fechadura-com-RFID/
 └── README.md
 ```
 
+### Arquitetura lógica (camadas)
+
+| Camada | Componentes |
+|---|---|
+| Percepção (borda) | ESP32-C3 Super Mini + RC522 (SPI) + Servo SG90 + LEDs |
+| Rede | Wi-Fi 2.4 GHz — HTTP REST (HTTPS) com payload JSON |
+| Nuvem / Aplicação | Supabase (PostgreSQL + API REST) + Angular 21 + Netlify |
+
+> O dashboard Angular consome a API REST do Supabase via polling a cada 3 segundos, exibindo o histórico de acessos em tempo real.
+
+### Diagrama de arquitetura
+
+>  <img width="1007" height="563" alt="image" src="https://github.com/user-attachments/assets/ff8d6d23-21b6-4f2a-ae4b-6176f9df56c1" />
+
+
+### Fluxograma do firmware
+
+> [inserir imagem do fluxograma — lógica interna do ESP32: leitura RFID → decisão → servo → LEDs → Supabase]
+
+### Esquema elétrico
+
+> [inserir foto ou print do circuito montado na protoboard]
+
+### Pinagem (ESP32-C3 Super Mini)
 ---
 
 ## 🖥️ Dashboard Web
