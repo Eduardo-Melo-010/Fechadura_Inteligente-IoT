@@ -1,6 +1,16 @@
 # 🔐 Fechadura com RFID
 
-Sistema de controle de acesso utilizando ESP32-C3, leitor RFID RC522 e servo motor, com dashboard web em tempo real integrado ao Supabase.
+----
+
+## Sistema de controle de acesso utilizando ESP32-C3, leitor RFID RC522 e servo motor, com dashboard web em tempo real integrado ao Supabase.
+
+----
+
+### **Curso:** Análise e Desenvolvimento de Sistemas — 4º Período
+
+*Faculdade: Senac/PE* - *Orientador: *Professor Arnott Caiado*
+
+----
 
 ## 🔗 Links de Acesso
 
@@ -26,9 +36,7 @@ Sistema de controle de acesso utilizando ESP32-C3, leitor RFID RC522 e servo mot
 | SÁVIO TORRES DA SILVA LIRA |
 | VANESSA TREZENA DE AMORIM |
 
-
-**Curso:** Análise e Desenvolvimento de Sistemas — 4º Período
-**Faculdade:** Senac/PE | **Orientador:** Professor Arnott Caiado | 
+----
 
 ## 📋 Sobre o Projeto
 
