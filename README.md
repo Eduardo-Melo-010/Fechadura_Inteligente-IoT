@@ -12,7 +12,7 @@ Sistema de controle de acesso utilizando ESP32-C3, leitor RFID RC522 e servo mot
 | Link do Wokwi | [https://wokwi.com/projects/46612028162286796](https://wokwi.com/projects/466139587252499457) |
 | Link do backlog/workflow | [https://github.com/users/Eduardo-Melo-010/projects/2](https://github.com/users/Eduardo-Melo-010/projects/2) |
 
---
+----
 
 ## 👥 Equipe
 
