@@ -151,12 +151,20 @@ v         v
 v
 [volta ao início do loop]
 ```
+---
 
-### Esquema elétrico
+### 🔌 Esquema Elétrico — Pinagem
 
-> [inserir foto ou print do circuito montado na protoboard]
-
-### Pinagem (ESP32-C3 Super Mini)
+| Componente / Pino | Pino ESP32-C3 | Observação |
+|---|---|---|
+| RC522 — SDA (SS) | GPIO 2 | SPI — Chip Select |
+| RC522 — SCK | GPIO 3 | SPI — Clock |
+| RC522 — MOSI | GPIO 4 | SPI — Master Out |
+| RC522 — MISO | GPIO 5 | SPI — Master In |
+| RC522 — RST | GPIO 10 | Reset do módulo RFID |
+| Servo SG90 — Sinal | GPIO 6 | PWM — controle de posição |
+| LED branco | GPIO 8 | Saída digital — acesso liberado |
+| LED vermelho | GPIO 9 | Saída digital — acesso negado |
 ---
 
 ## 🖥️ Dashboard Web
