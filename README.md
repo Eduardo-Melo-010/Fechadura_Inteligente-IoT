@@ -60,6 +60,7 @@ Projeto-fechadura-com-RFID/
 │   └── controle-acesso-rfid/   # Dashboard Angular
 └── README.md
 ```
+---
 
 ### Arquitetura lógica (camadas)
 
@@ -71,14 +72,85 @@ Projeto-fechadura-com-RFID/
 
 > O dashboard Angular consome a API REST do Supabase via polling a cada 3 segundos, exibindo o histórico de acessos em tempo real.
 
+---
+
 ### Diagrama de arquitetura
 
 >  <img width="1007" height="563" alt="image" src="https://github.com/user-attachments/assets/ff8d6d23-21b6-4f2a-ae4b-6176f9df56c1" />
 
+---
 
 ### Fluxograma do firmware
-
-> [inserir imagem do fluxograma — lógica interna do ESP32: leitura RFID → decisão → servo → LEDs → Supabase]
+```
+[INÍCIO — setup()]
+|
+v
++------------------+
+|  Teste de LEDs   |
+|  branco + verm.  |
++------------------+
+|
+v
++------------------+
+|  Conectar Wi-Fi  |
+|  (até 20 tent.)  |
++------------------+
+|
+v
++------------------+
+| Inicializar RFID |
+|   e Servo SG90   |
++------------------+
+|
+v
+═══════════════════════════════════
+loop()
+═══════════════════════════════════
+|
+v
++------------------+
+| Aguardar tag     |
+|    RFID          |
++------------------+
+|
+v
++------------------+
+|   Ler UID        |
++------------------+
+|
+v
+/------------
+|  UID         |
+| autorizado?  |
+------------/
+|       |
+SIM      NÃO
+|         |
+v         v
++-------+  +--------+
+|LED    |  |LED     |
+|branco |  |verm.   |
+|Servo  |  |Servo   |
+|90°    |  |0°      |
+|3s     |  |3s      |
++-------+  +--------+
+|         |
+v         v
++-------+  +--------+
+|POST   |  |POST    |
+|Supabase  |Supabase|
+|true   |  |false   |
++-------+  +--------+
+|         |
+v         v
++------------------+
+|  PICC_HaltA()    |
+|  Encerra leitura |
++------------------+
+|
+v
+[volta ao início do loop]
+```
 
 ### Esquema elétrico
 
