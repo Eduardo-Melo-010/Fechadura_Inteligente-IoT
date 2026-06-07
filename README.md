@@ -258,6 +258,38 @@ A tabela `acessos` armazena cada tentativa de acesso:
 - **Deploy:** Netlify
 ---
 
+## 📋 Requisitos Funcionais (RF)
+
+| ID | Nome | Descrição | Critério de aceite |
+|---|---|---|---|
+| RF01 | Leitura de Tag RFID | O sistema deve ler e identificar tags RFID aproximadas ao leitor | Deve identificar a tag por meio de UID único, reconhecendo apenas tags previamente cadastradas |
+| RF02 | Implantação de Antena RFID | As portas devem possuir antenas RFID para leitura das tags | Todas as portas controladas devem possuir leitores RFID funcionais |
+| RF03 | Envio de Informação | O sistema deve enviar os dados de leitura para um middleware | Todas as leituras devem ser enviadas em tempo real ao middleware com mecanismo de reenvio em caso de falha |
+| RF04 | Armazenar Informação | O sistema deve armazenar os dados das leituras RFID | Deve armazenar data, hora, credencial utilizada e resultado da validação |
+| RF05 | Liberação de Acesso | O sistema deve liberar o acesso mediante validação da tag | Liberar apenas para tags válidas e autorizadas; acionar automaticamente o servo após validação |
+| RF06 | Duração de Liberação | O sistema deve controlar o tempo de liberação | A porta permanece liberada por tempo configurável e é bloqueada automaticamente após o limite |
+| RF07 | Encerramento do Acesso | O sistema deve bloquear o acesso após o período de liberação | O sistema trava automaticamente após o tempo limite ou mediante comando |
+| RF08 | Cadastro de Tags RFID | O sistema deve permitir o cadastro de tags RFID vinculadas a usuários | Cadastrar tags com UID único, vinculá-las a usuários e permitir ativação ou desativação |
+| RF09 | Cadastro de Usuários | O sistema deve permitir o cadastro de usuários autorizados | Cadastrar, editar e excluir usuários com vínculo a uma ou mais tags RFID |
+| RF10 | Registro de Logs de Acesso | O sistema deve registrar logs de todas as tentativas de acesso | Todas as tentativas devem ser registradas com data, hora, identificação do usuário e local |
+| RF11 | Atualização automática | O sistema deve exibir registros em dashboard web | Atualização automática a intervalos regulares refletindo os eventos registrados |
+| RF12 | Configuração de Tempo de Acesso | O sistema deve permitir configurar o tempo de liberação das portas | Definir tempo por porta ou globalmente com aplicação imediata |
+
+
+## 📋 Requisitos Não Funcionais (RNF)
+
+| ID | Nome | Descrição |
+|---|---|---|
+| RNF01 | Desempenho | Capacidade de processar leituras RFID de forma ágil, evitando atrasos perceptíveis para o usuário |
+| RNF02 | Disponibilidade | O sistema permanece acessível durante o horário de funcionamento, acompanhando os períodos de uso das salas |
+| RNF03 | Confiabilidade | Consistência das informações registradas e correto funcionamento ao longo do tempo |
+| RNF04 | Segurança da Informação | Proteção dos dados e operações contra acessos indevidos ou manipulações não autorizadas |
+| RNF05 | Manutenibilidade | Facilidade de realizar ajustes, correções e melhorias no sistema ao longo do tempo |
+| RNF06 | Tolerância a Falhas | Comportamento do sistema diante de falhas, mantendo funcionamento mesmo em situações adversas |
+| RNF07 | Recuperação de Falhas | Capacidade de restabelecer operações após interrupções ou erros |
+
+---
+
 ## 🔐 Segurança e Integridade Acadêmica
 
 As credenciais do projeto (Wi-Fi e Supabase) são armazenadas em um arquivo `config.h`
